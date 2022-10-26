@@ -33,6 +33,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['thebarberawrl.herokuapp.com', 'localhost']
 
+SITE_ID = 1
 
 # Application definition
 
