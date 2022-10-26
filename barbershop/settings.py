@@ -34,7 +34,7 @@ DEBUG = True
 
 X_FRAME_OPTION = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['barbershopawrl.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['thebarberawrl.herokuapp.com', 'localhost']
 
 
 # Application definition
