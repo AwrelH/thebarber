@@ -4,7 +4,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <img class="logo" src="static/barberlogo.png" alt="">
+        <img class="logo" src="assets/barbericon.png" alt="">
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
@@ -23,7 +23,7 @@
                                     <p class="author">Barber: {{ post.get_barber_display }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="post-link">
+                            <a href="{% url 'blog_detail' post.slug %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
                                
                             </a>

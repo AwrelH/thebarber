@@ -100,8 +100,12 @@ body {
 }
 
 .post-title {
-    margin-top: 20%;
+    margin-top: 5%;
     margin-left: 5%;
+    
+}
+.title-colors {
+    background-color: #C6AE94;
 }
 
 .post-subtitle {

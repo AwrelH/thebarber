@@ -34,6 +34,11 @@ DEBUG = True
 ALLOWED_HOSTS = ['thebarberawrl.herokuapp.com', 'localhost']
 
 SITE_ID = 1
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
 
 # Application definition
 
@@ -46,6 +51,9 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'cloudinary_storage',
     'django.contrib.staticfiles',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'cloudinary',
     'django_summernote',
     'blog',
