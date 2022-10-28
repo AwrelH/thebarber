@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'cloudinary',
+    'crispy_forms',
+    'crispy_bootstrap5',
     'django_summernote',
     'blog',
 ]
@@ -101,7 +103,7 @@ WSGI_APPLICATION = 'barbershop.wsgi.application'
 # }
 
 DATABASES = {
-    'default' : dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 
@@ -155,3 +157,7 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"

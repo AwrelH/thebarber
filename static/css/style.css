@@ -147,3 +147,14 @@ body {
     background: transparent;
     border: none;
 }
+
+.comments {
+    margin: 0
+
+}
+.comments:nth-child(even) {
+    background-color: cornsilk;
+}
+.comments > :first-child {
+    margin:0;    
+}
