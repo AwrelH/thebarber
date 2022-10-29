@@ -1,7 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import BlogPost
 from .forms import CommentForm
+from django.contrib import messages
 
 
 class BlogPostList(generic.ListView):
@@ -43,16 +45,18 @@ class BlogDetail(View):
             upvoted = True
 
         post_comment_form = CommentForm(data=request.POST)
-
+ 
         if post_comment_form.is_valid():
             post_comment_form.instance.name = request.user.username
             post_comment_form.instance.email = request.user.email
             comment = post_comment_form.save(commit=False)
             comment.post = blog
             comment.save()
+            messages.success(
+                request, 'Your post is successfully posted, wait for approval')
         else:
             post_comment_form = CommentForm()
-
+          
         return render(
             request,
             'blog_detail.html',
@@ -65,3 +69,16 @@ class BlogDetail(View):
 
             },
         )
+
+
+class BlogUpvote(View):
+
+    def post(self, request, slug):
+        post = get_object_or_404(BlogPost, slug=slug)
+
+        if post.upvotes.filter(id=request.user.id).exists():
+            post.upvotes.remove(request.user)
+        else:
+            post.upvotes.add(request.user)
+
+        return HttpResponseRedirect(reverse('blog_detail', args=[slug]))

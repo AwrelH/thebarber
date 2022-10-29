@@ -35,8 +35,25 @@
                 <div class="row">
                     {{ blog.content | safe }}
                     <div class="col-1">
-                        <!-- The number of likes goes before the closing strong tag -->
-                        <strong class="text-secondary"><i class="far fa-heart"></i> </strong>
+
+                        <strong>
+                            {% if user.is_authenticated %}
+                            <form class="d-inline" action="{% url 'blog_upvote' blog.slug %}" method="POST">
+                                {% csrf_token %}
+                                {% if upvoted %}
+                                <button type="submit" name="blog_id" value="{{blog.slug}}" class="btn-like"><i
+                                        class="fas fa-heart"></i></button>
+                                {% else %}
+                                <button type="submit" name="blog_id" value="{{blog.slug}}"  class="btn-like"><i
+                                        class="far fa-heart"></i></button>
+                                {% endif %}
+                            </form>
+                            {% else %}
+                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            {% endif %}
+                            <!-- The number of likes goes before the closing strong tag -->
+                            <span class="text-secondary">{{ blog.number_of_upvotes }} </span>
+                        </strong>
                     </div>
                     <div class="col-1">
                         {% with comments.count as total_comments %}
@@ -46,7 +63,8 @@
                                {% else %}
                                <i class="far fa-comments"></i>
                                {% endif %}
-                            <!-- Our total_comments variable goes before the closing strong tag -->
+                            <!-- Our total_comments variable goes before the closing strong tag -->'
+                            {{total_comments}}
                         </strong>
                         {% endwith %}
                     </div>
