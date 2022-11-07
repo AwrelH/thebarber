@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import BlogPost
+from .models import BlogPost, Comment
 from .forms import CommentForm
 from django.contrib import messages
 
@@ -9,7 +9,7 @@ from django.contrib import messages
 class BlogPostList(generic.ListView):
     model = BlogPost
     queryset = BlogPost.objects.filter(status=1).order_by('-created_on')
-    template_name = 'index.html'
+    template_name = 'blog/index.html'
     paginate_by = 9
 
 
@@ -19,17 +19,19 @@ class BlogDetail(View):
         queryset = BlogPost.objects.filter(status=1)
         blog = get_object_or_404(queryset, slug=slug)
         comments = blog.comments.filter(approved=True).order_by('created_on')
+        comment_count = len(comments)
         upvoted = False
         if blog.upvotes.filter(id=self.request.user.id).exists():
             upvoted = True
 
         return render(
             request,
-            'blog_detail.html',
+            'blog/blog_detail.html',
             {
                 'blog': blog,
                 'comments': comments,
                 'commented': False,
+                'comment_count': comment_count,
                 'upvoted': upvoted,
                 'post_comment': CommentForm()
 
@@ -40,6 +42,7 @@ class BlogDetail(View):
         queryset = BlogPost.objects.filter(status=1)
         blog = get_object_or_404(queryset, slug=slug)
         comments = blog.comments.filter(approved=True).order_by('created_on')
+        comment_count = len(comments)
         upvoted = False
         if blog.upvotes.filter(id=self.request.user.id).exists():
             upvoted = True
@@ -59,10 +62,11 @@ class BlogDetail(View):
           
         return render(
             request,
-            'blog_detail.html',
+            'blog/blog_detail.html',
             {
                 'blog': blog,
                 'comments': comments,
+                'comment_count': comment_count,
                 'commented': True,
                 'upvoted': upvoted,
                 'post_comment': CommentForm()

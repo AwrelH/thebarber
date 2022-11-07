@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+{% load crispy_forms_tags %}
+
+<main class="container">
+    <div class="row">
+        <div class="col-4 offset-4">
+            {% if user.is_authenticated %}
+            <h2 class="text-center mt-3">Delete appointment</h2>
+<form action="{% url 'delete_booking' post.id %}" method="POST">
+    {% csrf_token %}
+    
+    {{ form | crispy }}
+    <h4>Are you sure you want to delete your appointment?</h4>
+
+    <a href="{% url 'booking' %}"  name="cancel"  class="btn btn-success">Cancel</a>
+    <button type="submit"  class="btn btn-danger">Delete your appointment</button>
+
+</form>
+
+{% endif %}
+</div>
+</div></main>
+{% endblock content %}

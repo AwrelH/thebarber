@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<section class="d-flex flex-column justify-content-start align-items-center text-center min-vh-100 mb-6">
+    <div class="row">
+        <div class="col">
+            <h1>Current Bookings</h1>
+            <p>Hello <strong id="current-user">{{ user }}</strong>, these are your bookings</p>
+
+            <div class="row">
+
+                <div class="col-8 offset-2"></div>
+                <table class="table table-hover">
+                    {% if user == request.user %}
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Type of appointment</th>
+                            <th scope="col">Confirmed</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    {% for post in bookings %}
+
+                    <tbody>
+                        <tr>
+                            {% if post.user == request.user %}
+                            <th scope="row">{{post.name}}</th>
+                            <td> {{post.appointment_time }}</td>
+                            <td> {{post.get_slots_display }} </td>
+                            <td> {{post.get_appointment_type_display }} </td>
+                            
+                            {% if post.is_booked %}
+                            <td><i class="fa-solid fa-circle-check text-success"></i> </td>
+                            {% else %}
+                            <td> <i class="fa-solid fa-circle-xmark text-danger"></i> </td>
+                            {% endif %}
+                            <td> <a href="{% url 'edit_booking' post.id %}"><i class="fa-sharp fa-solid fa-pen-to-square "></i></a></td>
+                            <td> <a href="{% url 'delete_booking' post.id %}"><i class="fa-solid fa-trash"></i></a></td>
+                        </tr>
+                    
+                        
+
+                    </tbody>
+                    {% endif %}
+                    
+                
+
+            </div>
+
+            {% endfor %}
+            </table>
+            <a class="btn btn-primary" href="{% url 'new_booking' %}">New Booking</a>
+        </div>
+        {% if user.is_authenticated %}
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form}}
+
+            {% endif %}
+            {% endif %}
+        </form>
+
+
+    </div>
+</section>
+{% endblock %}
