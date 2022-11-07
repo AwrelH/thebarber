@@ -25,3 +25,5 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
 
 ]
+
+handler404 = 'barbershop.views.page_not_found_view'
