@@ -1,0 +1,220 @@
+{% extends 'base.html' %} {% block content %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+<div class="container">
+        <div class="row-fluid">
+         <div class="row mt-5">
+            <!-- Jumbotron -->
+<div class="p-3 bg-image rounded-3" style="
+background-image: url('{% static 'barberchairs.png' %}');
+height: auto;
+">
+<div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+<div class="d-flex h-100 p-1">
+  <div class="text-white">
+    <h1 class="mb-3 text-center">Who are we?</h1>
+    <h4 class="">We are a professional, family owned and operated barbers offering a traditional barbershop
+        experience across our shop. From the homepage you are able to book appointments. Feel free to signup. </h4>
+        <p>From the main page you can see our blog, where we post services that have been done by us. <br>
+        As a registered member you can also upvote these posts, comment and be inspired. <br>
+        You can also do the old fashion walk-in, Welcome! </p>
+  </div>
+</div>
+</div>
+</div>
+<!-- Jumbotron -->
+            
+            
+            
+                <!-- ======= Services Section ======= -->
+    <section id="services" class="services mt-4">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-header">
+            <h2>Our Main Services</h2>
+            <p>We offer a range of services at the shop you will able to add more to these services.</p>
+          </div>
+  
+          <div class="row gy-5">
+  
+            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+              <div class="service-item">
+                <div class="img">
+                  <img src="{% static 'low_fade_haircut.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="details position-relative">
+                  <div class="icon">
+                    <i class="bi bi-activity"></i>
+                  </div>
+                  
+                    <h3>Haircuts</h3>
+                  
+                    <p>We will treat your hair with the best touch and make sure you sit comfortable in our 
+                        barber chairs and some nice tunes in the background. </p> </div>
+              </div>
+            </div><!-- End Service Item -->
+  
+            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+              <div class="service-item">
+                <div class="img">
+                  <img src="{% static 'facebeard.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="details position-relative">
+                  <div class="icon">
+                    <i class="bi bi-broadcast"></i>
+                  </div>
+                  
+                    <h3>Beard Grooming</h3>
+                  
+                    <p>We also groom beard, because with a beard there comes a great responsibility, but don't worry
+                        we will you out and groom it in the best way possible.</p></div>
+              </div>
+            </div><!-- End Service Item -->
+  
+            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+              <div class="service-item">
+                <div class="img">
+                  <img src="{% static 'hairandbeard.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="details position-relative">
+                  <div class="icon">
+                    <i class="bi bi-easel"></i>
+                  </div>
+                  
+                    <h3>Haircut & Beard</h3>
+                 
+                    <p>Of course you can have the best of both worlds, why choice? We will treat both your hair and beard. </p>
+                </div>
+              </div>
+            </div><!-- End Service Item -->
+
+          </div>
+  
+        </div>
+
+                    <!-- Jumbotron -->
+<div class="p-3 bg-image rounded-3 col-md-8 few-good">
+<div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+<div class="d-flex h-100 p-1">
+  <div class="text-white p-4">
+    <h3 class="text-center">Few good expressions to know</h3>
+    <ul class="">
+        <li><h4 class="large">Skin Fade</h4>
+            <p>A Skin fade is achieved by cutting the hair with a very short taper that fades into the skin - thus
+                giving this haircut its name...</p></li>
+        <li><h4 class="large">Clipper Cut</h4>
+            <p>A clipper cut is achieved by using clipper grades over the entire head.</p></li>
+        <li><h4 class="large">Beards</h4>
+            <p>We offer Simple Beard Trims to Shape ups & Full Beard Shaves...</p></li>
+        <li> <h4 class="large">Trimming</h4>
+            <p>Removing only split ends with scissors or razor (about 1/4 to 1/2 of an inch)</p></li>
+            <li> <h4 class="large">Layer cutting</h4>
+                <p>the opposite of a blunt cut. The hair is cut under a certain angle and falling in a cascading style</p></li>
+        <li><h4 class="large">Buzz Cut</h4>
+            <p>The Buzz Cut is a generic haircut term for a short, buzzed haircut, and is also known as a military cut.</p></li>
+        <li><h4 class="large">Neckline</h4>
+            <p>The neckline you choose will have a significant impact on the look of your cut. We've broken them down to into three styles.</p>
+             <ul class="readable">
+                <li class="">
+                    <h5>Blocked Neckline</h5>
+                    <p>A blocked neckline cuts a straight, sharp line across the natural neckline. 
+                        It's a clean and tidy style and has the effect of making your neck look wider than other neckline options. 
+                        Keep in mind that this neckline may require frequent touch-ups and maintenance as it grows back in.</p>
+                </li>
+                <li>
+                    <h5>Rounded Neckline</h5>
+                    <p>A rounded neckline is similar to a blocked neckline, but with rounded corners. 
+                        Like the blocked neckline, this too can start to look untidy after a few weeks.</p>
+                </li>
+                <li>
+                    <h5>Tapered Neckline</h5>
+                    <p>A tapered neckline follows your natural neckline. 
+                        It's called “tapered” because it follows the natural line of your hair and gets shorter toward the back of your head. 
+                        This style is the most forgiving and remains somewhat blended as your hair grows back in.</p>
+                </li>
+             </ul>
+        </li>
+    </ul>
+  </div>
+</div>
+</div>
+</div>
+<!-- Jumbotron -->
+      </section><!-- End Services Section -->
+
+
+            
+        </div>
+       
+
+
+        
+    </div>
+    <section id="contact" class="contact bg-primary mt-4 text-white">
+        <div class="container">
+  
+          <div class="section-header">
+            <h2>Location</h2>
+            </div>
+  
+        </div>
+  
+        <div class="map">
+          <iframe width="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2036.2327170769709!2d18.075871!3d59.3123709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f77f0b0ca9eeb%3A0xdaf23f43d3f73bf9!2sBondegatan%204%2C%20116%2023%20Stockholm%2C%20Sverige!5e0!3m2!1ssv!2sit!4v1667805674452!5m2!1ssv!2sit" frameborder="0" allowfullscreen></iframe>
+        </div><!-- End Google Maps -->
+  
+  
+          <div class="row text-center">
+            <h3>Get in touch</h3>
+                            <p>Walk in.</p>
+            <div class="d-grid">
+  
+              <div class="row">
+                
+  
+                <div class="  col-sm-4">
+                  
+                  <div>
+                    <h4>Location:</h4>
+                    <p>Bondegatan 4, STHLM</p>
+                  </div>
+                </div><!-- End Info Item -->
+  
+                <div class="  col-sm-4">
+                  
+                  <div>
+                    <h4>Email:</h4>
+                    <p>Barbershop@haircut.com</p>
+                  </div>
+                </div><!-- End Info Item -->
+  
+                <div class="col-sm-4">
+                  
+                  <div>
+                    <h4>Call:</h4>
+                    <p>+4670-4422-666</p>
+                  </div>
+                </div><!-- End Info Item -->
+  
+              </div>
+              <div class="col-md-auto">
+                  <h3>Contact us</h3>
+                <div class="question-form">
+                  <form action="" method="POST">
+                    {% csrf_token %}
+                  {{form | crispy }}
+                    <input class="btn btn-success btn-signup  btn-lg mb-5" type="submit" value="Send">
+                  </form>
+                  
+                </div>
+              </div><!-- End Info Item -->
+  
+            </div>
+  
+                
+          </div>
+  
+        </div>
+      </section><!-- End Contact Section -->
+    {% endblock content %}
