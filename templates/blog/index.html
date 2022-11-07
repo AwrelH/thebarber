@@ -1,10 +1,11 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
-<div class="container main-frame">
+
+<div class="container">
     <div class="row">
-        <img class="logo" src="static/barberlogo.png" alt="">
+        <img class="logo" src="{% static 'barberlogo.png' %}" alt="">
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
@@ -14,8 +15,7 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.post_image.url %}
-                                <img class="card-img-top"
-                                    src="static/placeholder.png">
+                                <img class="card-img-top" src="{% static 'placeholder.jpg' %}">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.post_image.url }}">
                                 {% endif %}
@@ -25,19 +25,23 @@
                             </div>
                             <a href="{% url 'blog_detail' post.slug %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
-                               
+
                             </a>
                             <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
+                            <div class="">
+                                <p class=" card-text text-muted h6">Posted: {{ post.created_on | date:'Y-m-d'}}
+                                
+                                <span class="reactions"><i class="far fa-heart"></i>
 
-                                {{ post.number_of_upvotes }}
-                            
-                                {% if post.comments.count <= 1 %}
-                                <i class="far fa-comment"></i>
-                               {% else %}
-                               <i class="far fa-comments"></i>
-                               {% endif %}
-                                {{ post.comments.count }}</p>
+                                        {{ post.number_of_upvotes }}
+
+                                        {% if post.comments.count <= 1 %} <i class="far fa-comment"></i>
+                                            {% else %}
+                                            <i class="far fa-comments"></i>
+                                            {% endif %}
+                                            {{ post.comments.count }}</span>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -57,7 +61,7 @@
                 {% endif %}
                 {% if page_obj.has_next %}
                 <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-    
+
                 {% endif %}
             </ul>
         </nav>

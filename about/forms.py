@@ -12,9 +12,10 @@ class MessageForm(forms.ModelForm):
             'question': 'Question or feedback'
         }
         widgets = {
-            'name': forms.TextInput(attrs={'placeholder': 'George Costanza'}),
+            'name': forms.TextInput(
+                attrs={'placeholder': 'George Costanza'}),
             'question': forms.Textarea(
-                attrs={'placeholder': 'how many seats...'}),
-            'email': forms.EmailInput(attrs={'placeholder': 'email@example.com'})
+                attrs={'placeholder': 'Example question...'}),
+            'email': forms.EmailInput(
+                attrs={'placeholder': 'email@example.com'})
         }
-

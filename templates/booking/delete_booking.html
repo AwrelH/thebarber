@@ -3,7 +3,7 @@
 
 <main class="container">
     <div class="row">
-        <div class="col-4 offset-4">
+        <div class="col-sm-8">
             {% if user.is_authenticated %}
             <h2 class="text-center mt-3">Delete appointment</h2>
 <form action="{% url 'delete_booking' post.id %}" method="POST">

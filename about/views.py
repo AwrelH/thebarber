@@ -23,9 +23,7 @@ def about(request):
             messages.success(
                 request, 'Your message has been received')
 
-    
     return render(
         request,
         'about/about.html', context
         )
-
