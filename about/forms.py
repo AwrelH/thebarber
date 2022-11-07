@@ -9,7 +9,8 @@ class MessageForm(forms.ModelForm):
 
         labels = {
             'name': 'Name',
-            'question': 'Question or feedback'
+            'question': 'Question or feedback',
+            'email': 'Email'
         }
         widgets = {
             'name': forms.TextInput(

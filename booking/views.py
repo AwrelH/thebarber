@@ -35,7 +35,7 @@ def new_booking(request, *args, **kwargs):
             return redirect('booking')
 
     form = AppointmentForm()
-    
+
     return render(
         request, 'booking/new_booking.html', context
     )
