@@ -194,10 +194,11 @@ body {
 }
 .card-blog-detail {
     background-color: white;
+    font-size: 1.8rem;
+    
 }
-.content-text {
+.card-blog-detail:first-child {
     font-size: 1.5rem;
-    text-align: center;
 }
 
 /* For small screens size from 650px wide and smaller */
