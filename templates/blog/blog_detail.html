@@ -6,20 +6,18 @@
     <div class="container">
         <div class="row g-0">
             <div class="col-md-7 title-colors">
-                <!-- Post title goes in these h1 tags -->
+                <!-- Post title -->
                 <h1 class="post-title">
                     {{ blog.title }}
                 </h1>
-                <!-- Post author goes before the | the post's created date goes after -->
+                <!-- Post author -->
                 <p class="post-subtitle"> By {{ blog.get_barber_display }} | {{ blog.created_on }} </p>
             </div>
             <div class="d-md-block col-md-7">
                 <!-- The featured image URL goes in the src attribute -->
-                {% if "placeholder" in blog.post_image.url %}
-                <img src="static/placeholder.png" width="100%">
-                {% else %}
+
                 <img class="img-fluid" src="{{ blog.post_image.url }}" width="100%">
-                {% endif %}
+
             </div>
         </div>
     </div>
@@ -28,43 +26,42 @@
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the  | safe filter inside the template tags -->
-                <p class="card-text "></p>
-                <div class="row">
-                    {{ blog.content | safe }}
-                    <div class="col-1">
+            <div class="card-blog-detail d-md-block col-md-7">
+                <!-- The post content goes inside the content-text. -->
+                <p class="content-text">{{ blog.content | safe }}</p>
+                <div class="row justify-content-center">
+
+                    <div class="col-2 text-center">
 
                         <strong>
                             {% if user.is_authenticated %}
-                            <form class="d-inline" action="{% url 'blog_upvote' blog.slug %}" method="POST">
+                            <form class="" action="{% url 'blog_upvote' blog.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if upvoted %}
                                 <button type="submit" name="blog_id" value="{{blog.slug}}" class="btn-like"><i
-                                        class="fas fa-heart"></i></button>
+                                        class="fa-solid text-danger fa-scissors"></i></button>
                                 {% else %}
-                                <button type="submit" name="blog_id" value="{{blog.slug}}"  class="btn-like"><i
-                                        class="far fa-heart"></i></button>
+                                <button type="submit" name="blog_id" value="{{blog.slug}}" class="btn-like"><i
+                                        class="fa-solid text-warning fa-hand-scissors"></i></button>
                                 {% endif %}
+                                <span class="text-secondary">{{ blog.number_of_upvotes }} </span>
                             </form>
                             {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            <span class="text-secondary"><i class="fa-solid fa-scissors"></i></span>
                             {% endif %}
-                            <!-- The number of likes goes before the closing strong tag -->
-                            <span class="text-secondary">{{ blog.number_of_upvotes }} </span>
+                            <!-- number of upvotes -->
+
                         </strong>
                     </div>
-                    <div class="col-1">
+                    <div class="col-2 text-center">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary">
-                            {% if blog.comments.count <= 1 %}
-                                <i class="far fa-comment"></i>
-                               {% else %}
-                               <i class="far fa-comments"></i>
-                               {% endif %}
-                            <!-- Our total_comments variable goes before the closing strong tag -->
-                            {{total_comments}}
+                            {% if blog.comments.count <= 1 %} <i class="far fa-comment"></i>
+                                {% else %}
+                                <i class="far fa-comments"></i>
+                                {% endif %}
+                                <!-- total number of comments -->
+                                {{total_comments}}
                         </strong>
                         {% endwith %}
                     </div>
@@ -81,19 +78,19 @@
         <div class="col card mb-4  mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
-                <!-- We want a for loop inside the tags to iterate through each comment in comments -->
+                <!-- for loop of the comments -->
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
-                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
+                        <!-- comment.name -->
                         {{ comment.name }}
                         <span class=" text-muted font-weight-normal">
-                            <!-- The comment's created date goes here -->
-                            {{ comment.created_on | date  }}
+                            <!-- created_on -->
+                            {{ comment.created_on | date }}
                         </span> wrote:
                     </p>
-                    <!-- The body of the comment goes before the | -->
-                    {{ comment.body  | linebreaks }}
+                    <!-- The body of the comment -->
+                    {{ comment.body | linebreaks }}
                 </div>
                 <!-- Our for loop ends here -->
                 {% endfor %}
@@ -101,7 +98,7 @@
         </div>
         <div class="col-md-8 card mb-4  mt-3 ">
             <div class="card-body">
-                
+
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
                     Your comment is being reviewed.

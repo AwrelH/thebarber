@@ -28,7 +28,7 @@ body {
 }
 
 .main-bg {
-    background: linear-gradient(to bottom, #fff, #445261);
+    background: #4b6b8c;
     /* background-color: #F9FAFC; */
 }
 
@@ -46,7 +46,9 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #C6AE94;
+    background-color: #F7D8B7;
+    border-radius: 0 20px 0 0;
+    padding-right: 10px;
 }
 .logo {
     margin: 0 auto;
@@ -91,7 +93,9 @@ body {
     transform: skew(15deg);
     z-index: 100;
 }
-
+.navbar {
+    border-bottom: 1px solid rgb(243, 232, 232);
+}
 .post-link {
     text-decoration: none;
     color: #445261;
@@ -113,7 +117,7 @@ body {
 
 .post-subtitle {
     margin-left: 5%;
-    color: lightgray;
+    color: rgb(22, 21, 21);
 }
 
 .btn-signup {
@@ -176,6 +180,31 @@ body {
 
 }
 
+.app-card {
+    background-color: rgb(205, 182, 157);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.card-body {
+    background-color: #F9EBDC;
+    padding-bottom: 0;
+}
+.card-title,.card-text, .card-body, .reactions, .author {
+    color: #9f5455;
+}
+.card-blog-detail {
+    background-color: white;
+}
+.content-text {
+    font-size: 1.5rem;
+    text-align: center;
+}
 
+/* For small screens size from 650px wide and smaller */
 
-  
+@media screen and (max-width: 650px) {
+    .logo {
+        visibility: collapse;
+    }
+
+}
