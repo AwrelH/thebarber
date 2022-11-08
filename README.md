@@ -1,17 +1,17 @@
 # BarberShop - the local barber for all.
-    IMAGE
+  
   <p align="center">
-  <img src=""?raw=true alt=""></p>
+  <img src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/barberlogo.png"?raw=true alt=""></p>
 
 # <p href="#intro" id="intro"> - Intended Purpose of This Website:</p>
 
-  - Fill in: To greet customers.
+  - To greet customers.
 
-  - Fill in: To be a window of exposure.
+  - To be a window of exposure.
 
-  - Fill in: To interact with the customer.
+  - Interact with the customer.
 
-  - Fill in: So customers can make appointments.
+  - So customers can make appointments.
 
 
 ## Table of contents
@@ -19,16 +19,12 @@
 - <a href="#thm">Themes</a>
 - <a href="#epi">Epics</a>
 - <a href="#us">User Stories</a>
-- <a href="#de">Design</a>
+- <a href="#des">Design</a>
 - <a href="#wire">Wireframes</a>
 - <a href="#erd">ERD Diagram</a>
-- <a href="#lf">Live Features</a>
-- <a href="#df">Desired Features</a>
 - <a href="#tpy">Testing(Python)</a>
-- <a href="#tjs">Testing(Javascript)</a>
 - <a href="#dep">Deployment</a>
 - <a href="#b">Bugs During Development</a>
-- <a href="#ub">Unsolved Bugs</a>
 - <a href="#tu">Technologies Used</a>
 - <a href="#cr">Credits</a>
 
@@ -207,12 +203,14 @@
 
 
 
+<p align="right"><a href="#intro">Return to table of contents</a></p><p id="des"></p>
 
 # Design
 
 ## Color Pallete
 - HEX: 000000, 445261, 4B6B8C, 0D6EFD, F9EBDC
- 
+ <p align="center">
+  <img width=500 src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/palette.png"?raw=true alt=""></p>
 
 ## Fonts
 - 'Belleza','Akaya Telivigala', Lato, sans-serif;
@@ -231,25 +229,24 @@
   - Title of the wireframe
 
 <p align="center">
-  <img src="(https://raw.githubusercontent.com/AwrelH/thebarber/main/static/barberlogo.png?raw=true)" alt="">INDEX</p>
+  <img  src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/index.png" alt=""> Index</p>
 
 <p align="center">
-  <img src="static/images/readme-images/Login-Page-PP.png"?raw=true alt=""></p>
+  <img width=500 src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/booking.png"?raw=true alt=""> Booking</p>
 
 <p align="center">
-  <img src="static/images/readme-images/Sign-up-Page-PP.png"?raw=true alt=""></p>
+  <img width=500 src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/new_booking.png"?raw=true alt=""> New Booking</p>
+
+
 
 <p align="center">
-  <img src="static/images/readme-images/Note-Entry-PP.png"?raw=true alt=""></p>
+  <img width=500 src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/blogpost.png"?raw=true alt=""> Blogpost</p>
 
 <p align="center">
-  <img src="static/images/readme-images/Note-Display-PP.png"?raw=true alt=""></p>
+  <img width=500 src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/about.png"?raw=true alt=""> About</p>
 
 <p align="center">
-  <img src="static/images/readme-images/Blog-Chat-PP.png"?raw=true alt=""></p>
-
-<p align="center">
-  <img src="static/images/readme-images/Blog-Detail-PP.png"?raw=true alt=""></p>
+  <img width=500 src="static/images/readme-images/Blog-Detail-PP.png"?raw=true alt=""></p>
 
 
 
@@ -266,46 +263,54 @@
 
 # Live Features
 
-  - Live Features
+  - The live site is found
 
 <p align="center">
   <img src=""?raw=true alt=""></p>
 
-
-<p align="right"><a href="#intro">Return to table of contents</a></p><p id="df"></p>
-
-# Desired Features
-
-  - Desired Features
-
-<p align="center">
-  <img src=""?raw=true alt=""></p>
 
 <p align="right"><a href="#intro">Return to table of contents</a></p><p id="tpy"></p>
 
 # Testing (Python)
 
-  - Unit-Testing-Python
+  - a few Unittest was created to test out views and models
 
-<p align="center">
-  <img src=""?raw=true alt=""></p>
-
-<p align="right"><a href="#intro">Return to table of contents</a></p><p id="tjs"></p>
-
-# Testing (JavaScript)
-
-  - Unit-Testing-JavaScript
-
-<p align="center">
-  <img src=""?raw=true alt=""></p>
 
 <p align="right"><a href="#intro">Return to table of contents</a></p><p id="dep"></p>
 
 # Deployment
 
-  - Early Deployment
+## Steps to take prior to deployment on Heroku
 
-  - Final Deployment
+1. creating a repository using code institutes template
+1. install django and startproject and startapp
+1. install required addons for the project
+1. create a env.py file to store all the secret keys and credentials
+1. replace secret key/databases in settings.py with variables from env.py
+1. create a Procfile containing  `web: gunicorn barbershop.wsgi`
+1. set up different variables, paths and templates directory
+1. summernote editor was used so for this to work in Heroku add: `X_FRAME_OPTIONS = SAMEORIGIN `to
+   settings.py
+1. Use `python3 freeze --local > requirements.txt` so that Heroku install all the dependencies when deploying
+
+
+  ### Early Deployment was an objective. Steps to take after creating a GitHub repository:
+1. Sign in to [Heroku](https://id.heroku.com) 
+1. Create New App
+1. Select my region and click on create app button
+1. Add resource in for of Heroku Postgres database
+1. go to settings and  Reveal Config Vars and add a new record with SECRET_KEY, CLOUDINARY_URL, DISABLE_COLLECTSTATIC, PORT
+1. Scroll to the top of the page and choose the Deploy tab
+1. Select Github as the deployment method
+1. Search for the repository thebarber and click the connect button
+1. Scroll to the bottom of the deploy page and select the preferred deployment type
+1. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github
+
+ ### Final Deployment
+
+1. When final development is ready the debug setting needs to be changed to: `DEBUG = False` in settings.py, <br>
+This also allows for the CSS-styling to get activated. 
+1. In Heroku settings, `delete` the config var `DISABLE_COLLECTSTATIC = 1`
 
 <p align="center">
   <img src=""?raw=true alt=""></p>
@@ -314,31 +319,60 @@
 
 # Bugs (During Development)
 
-  - Bug One
+  - During my development I stumbled on a few bugs regarding my database, and migrations. Even though I had been migrating things correctly, a change of a datafield in my booking model. That change created new instances of migrations files each time even though no new changes was made. Nothing that really impacted the project in any way but was annoying. 
 
-  - Bug Two
+  - In the late stage of my project I was met with another bug regarding my database and that created a lot of frustration, and I was unable to fix it, instead I clean out the database and started over. This ending up with uploading new content to the blog, users and so on. But in the end resulting into a bug free database. 
 
-<p align="center">
-  <img src=""?raw=true alt=""></p>
+  - A smaller type of bug was when I had a `row` that was sitting in another, thus creating images and margins that were not in line when new blog posts were loaded. This was noticed by another student of code institute when I was asking for fresh eyes to help me spot the error.
+ 
+## Bugs Further testing/Validating
 
-<p align="right"><a href="#intro">Return to table of contents</a></p><p id="ub"></p>
+As my project goes to the wire, and my time management not been on point meaning I haven't been able to go through the code, check for error and correct them properly within these areas below. 
 
-# Bugs (Unsolved)
+### Lighthouse
+As seen below there are a few things to do before one can be satisfied with the numbers. Compress image sizes, remove redundant code in head. Add alt='text' to images. Small contrast ratio regarding bits of the content. 
 
-  - Bug One
 
-  - Bug Two
 
-<p align="center">
-  <img src=""?raw=true alt=""></p>
+### CSS
+This was error-free. 
+
+### HTML
+The first check of the site, the homepage. revealed 32 errors. Stray end tags, images without an alt-attribute, trailing slashs. Adding alt-text to the images will not be done. The about page had 12 error-messages.
+
+### PEP8
+Looking through the pep8 validator in the gitpod IDE, issues of code lines longer than 79, where a few before I broke them off in new lines. Some were not changeable because of django own namecalling, those were added with a # noqa tag. In my latest review this was error-free.
+
+
+
+
 
 <p align="right"><a href="#intro">Return to table of contents</a></p><p id="tu"></p>
 
 # Technologies Used
 
-  - Tech One
+  - HTML5
+  - CSS
+  - Django
+  - Python
+  - Javascript
 
-  - Tech Two
+  #### Django Packages
+
+* [Gunicorn](https://gunicorn.org/)
+   
+* [Cloudinary](https://cloudinary.com/)
+   
+* [Dj_database_url](https://pypi.org/project/dj-database-url/)
+   
+* [Psycopg2](https://pypi.org/project/psycopg2/)
+   
+* [Summernote](https://summernote.org/)
+  
+* [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+  
+* [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+
 
 <p align="center">
   <img src=""?raw=true alt=""></p>
@@ -347,26 +381,18 @@
 
 # Credits
 
-  - Images
+  - Images <br>
+  Where googled from different barbershops and added to my page 
 
-  - Media
+  - Walkthrough Code <br>
+  Thanks to Code Institute for the walkthrough that set the path to start and finish of this project
 
-  - Walkthrough Code
+  - Tutor Support <br>
+  Recieved help from tutor when I was wondering why my CSS was not applied to the project, and got that solved quite easy. 
 
-  - Tutor Support
-
-    - Help from Sean in Tutor support with the following code on the 16-10-2022:
-            <p>
-              instance = new_entry.save(commit=False)<br>
-              instance.created_by = User.objects.get(username=request.user.username)<br>
-              instance.save()
-            </p>
-
-    - The code above helped to solve a technical issue whereby I was rendering a form for the user to enter data and I did not want the created_by field to be seen by the user but it was a ForeignKey field and threw a violates not null exception when left blank. This code helped me to create an instance of the new_entry and set its ForeignKey to the users username before committing it to the database thus resolving the error.
-
-  - External Code
-
-<p align="center">
-  <img src=""?raw=true alt=""></p>
+  - External Code <br>
+  Used the following readme template as a good starting point for this project <br>
+  https://github.com/gfpkelly1986/Punters-Pal 
+  
 
 
