@@ -48,7 +48,7 @@ class BlogDetail(View):
             upvoted = True
 
         post_comment_form = CommentForm(data=request.POST)
- 
+
         if post_comment_form.is_valid():
             post_comment_form.instance.name = request.user.username
             post_comment_form.instance.email = request.user.email
@@ -59,7 +59,7 @@ class BlogDetail(View):
                 request, 'Your post is successfully posted, wait for approval')
         else:
             post_comment_form = CommentForm()
-          
+
         return render(
             request,
             'blog/blog_detail.html',
