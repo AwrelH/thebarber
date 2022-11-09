@@ -51,6 +51,8 @@
 
 - The Registered User
 
+- the site admin
+
 
 <p align="right"><a href="#intro">Return to table of contents</a></p><p id="us"></p>
 
@@ -201,6 +203,36 @@
     - add a form in the about section for users to use to send messages to site owner
 
 
+### Agile Approach
+GitHub's project has been used to make an Agile approach to this project. Using the Board style with, `todo, in progress and done`. Completing each issue and come closer the finish line with each step.
+
+<p align="center">
+  <img width=500 src=""?raw=true alt=""></p>
+
+
+## Features
+- Read/look at blog posts
+- react to these posts
+- comment these posts
+- ask question to the site owner from about us-page
+- reach back to unregistered/user that left question/feedback if mail is valid
+- register to page to become a user
+- view, book, edit and delete booking
+- read, edit, update or delete blogposts
+- approve comments
+- messages when login/signout/commented/booked/deleted/edited
+
+
+## Features That could be added
+- delete, edit comment by user
+- forum for users to ask questions to barber
+- a more clear picture of available and unavailable appointments
+- add pricing informations
+- add buying possibilities
+- login via social accounts
+- more personalized admin panel
+- load new posts by scrolling down
+
 
 
 <p align="right"><a href="#intro">Return to table of contents</a></p><p id="des"></p>
@@ -257,7 +289,7 @@
   - Title of ERD Diagram
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/modeldiagram.png"?raw=true alt=""></p>
+  <img width=500 src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/modeldiagram.PNG"?raw=true alt=""></p>
 
 
 <p align="center">
@@ -328,11 +360,11 @@ As my project goes to the wire, battling with this project, my time management h
 As seen below there were a few things to do before one could be satisfied with the numbers. Compress image sizes, remove redundant code in head. Add alt='text' to images. Small contrast ratio regarding bits of the content. 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/barbercontrastratio.png"?raw=true alt="">EXAMPLE</p>
+  <img src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/barbercontrastratio.PNG"?raw=true alt="">EXAMPLE</p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/lighthousevalues2.png"?raw=true alt=""></p>
+  <img src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/lighthousevalues2.PNG"?raw=true alt=""></p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/lighthousevalues2mobile.png"?raw=true alt=""></p>
+  <img src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/lighthousevalues2mobile.PNG"?raw=true alt=""></p>
 
 
 ### CSS
@@ -383,13 +415,15 @@ The Forms have validation but unfortunately easy to bypass with for example back
 * [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
 
 ### Tools
-[Iloveimg](https://www.iloveimg.com/) <br>
+- [Iloveimg](https://www.iloveimg.com/) <br>
 compress images
 
-[Balasamiq](https://balsamiq.com/) <br>
-wireframes
-[Microsoft Powerpoint](https://www.microsoft.com/en-ww/microsoft-365/powerpoint) <br>
+- [Balasamiq](https://balsamiq.com/) <br>
+wireframes <br>
+ - [Microsoft Powerpoint](https://www.microsoft.com/en-ww/microsoft-365/powerpoint) <br>
 Create an ERD Diagram
+- [Coolors](https://coolors.co/) <br>
+Create a palette
 
 
 
@@ -401,7 +435,9 @@ Create an ERD Diagram
 # Credits
 
   - Images <br>
-  Where googled from different barbershops and added to my page 
+  Where googled from different barbershops and added to my page <br>
+  Barbershop logo <br>
+  https://looka.com/logo-ideas/barber-shop-logo-design/
 
   - Walkthrough Code <br>
   Thanks to Code Institute for the walkthrough that set the path to start and finish of this project
@@ -418,4 +454,12 @@ Create an ERD Diagram
   https://www.ties.com/blog/hair-terminology-tell-barber-exactly-want
   
 
+#
 
+## Future features
+- make a more solid validation of forms/code
+- add more reactions to the blogposts
+- add price information in forms and about us-section regarding packages
+- View appointment slots that are and not available to the customer
+- Add a Forum to the users to post questions to the barber asking for tips/tricks regarding hair/beard
+- create a more appealing design and style
