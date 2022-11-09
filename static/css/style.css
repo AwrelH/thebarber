@@ -10,6 +10,9 @@ body {
     font-weight: 700;
     color: #4A4A4F;
 }
+.icon {
+    width: 60px;
+}
 
 .red-o {
     color: #E84610;
@@ -199,6 +202,10 @@ body {
 }
 .card-blog-detail:first-child {
     font-size: 1.5rem;
+}
+
+iframe {
+    width: 100%;
 }
 
 /* For small screens size from 650px wide and smaller */

@@ -5,7 +5,7 @@
 
 <div class="container">
     <div class="row">
-        <img class="logo" src="{% static 'barberlogo.png' %}" alt="">
+        <img class="logo" src="{% static 'barberlogo.png' %}" alt="barbershop logo">
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3">
             <div class="row">
@@ -17,7 +17,7 @@
                                 {% if "placeholder" in post.post_image.url %}
                                 <img class="card-img-top" src="{% static 'placeholder.jpg' %}">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.post_image.url }}">
+                                <img class="card-img-top" src=" {{ post.post_image.url }}" alt="customer+barbershop">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Barber: {{ post.get_barber_display }}</p>
@@ -27,14 +27,14 @@
                                 <h2 class="card-title">{{ post.title }}</h2>
 
                             </a>
-                            <hr />
+                            <hr>
                             <div class="row">
                                 <div class="col-6">
                                     <p class=" card-text h6">Posted: {{ post.created_on | date:'Y-m-d'}}</p>
                                 </div>
 
                                 <div class="col-6 text-end">
-                                    <p><span class="reactions"><i class="fa-solid text-danger fa-hand-scissors"></i></i>
+                                    <p><span class="reactions"><i class="fa-solid text-danger fa-hand-scissors"></i>
 
                                             {{ post.number_of_upvotes }}
 
@@ -43,10 +43,9 @@
                                                 {% else %}
                                                 <i class="far fa-comments text-primary"></i>
                                                 {% endif %}
-                                                {{ post.comments.count }}</span></p>
+                                                {{ post.comments.count }}</span>
+                                    </p>
                                 </div>
-
-                                </p>
                             </div>
                         </div>
                     </div>

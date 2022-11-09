@@ -116,7 +116,7 @@
                     <button type="submit" class="btn btn-signup btn-lg">Submit</button>
                 </form>
                 {% else %}
-                <h3 class="text-center align-center">As a registered user you can leave a comment.</h3>
+                <h3 class="text-center align-center">As a registered user you can leave a comment. <a href="{% url 'account_signup'%}">Sign up.</a></h3>
                 {% endif %}
                 {% endif %}
             </div>
