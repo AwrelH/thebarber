@@ -213,7 +213,7 @@
   <img width=500 src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/palette.png"?raw=true alt=""></p>
 
 ## Fonts
-- 'Belleza','Akaya Telivigala', Lato, sans-serif;
+- Belleza, Akaya Telivigal, sans-serif;
 
 
   
@@ -257,13 +257,8 @@
   - Title of ERD Diagram
 
 <p align="center">
-  <img src="static/images/readme-images/ERD diagram Project4.png"?raw=true alt=""></p>
+  <img src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/modeldiagram.png"?raw=true alt=""></p>
 
-<p align="right"><a href="#intro">Return to table of contents</a></p><p id="lf"></p>
-
-# Live Features
-
-  - The live site is found
 
 <p align="center">
   <img src=""?raw=true alt=""></p>
@@ -327,35 +322,49 @@ This also allows for the CSS-styling to get activated.
  
 ## Bugs Further testing/Validating
 
-As my project goes to the wire, and my time management not been on point meaning I haven't been able to go through the code, check for error and correct them properly within these areas below. 
+As my project goes to the wire, battling with this project, my time management have not been on point meaning I haven't been able to go through the code, validate, check for error and correct them properly and length.  
 
 ### Lighthouse
-As seen below there are a few things to do before one can be satisfied with the numbers. Compress image sizes, remove redundant code in head. Add alt='text' to images. Small contrast ratio regarding bits of the content. 
+As seen below there were a few things to do before one could be satisfied with the numbers. Compress image sizes, remove redundant code in head. Add alt='text' to images. Small contrast ratio regarding bits of the content. 
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/barbercontrastratio.png"?raw=true alt="">EXAMPLE</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/lighthousevalues2.png"?raw=true alt=""></p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/lighthousevalues2mobile.png"?raw=true alt=""></p>
 
 
 ### CSS
 This was error-free. 
 
 ### HTML
-The first check of the site, the homepage. revealed 32 errors. Stray end tags, images without an alt-attribute, trailing slashs. Adding alt-text to the images will not be done. The about page had 12 error-messages.
+Thanks to JoGorska's Code Validation video I found it easier than I first thought this would get. The first check of the site, the homepage. revealed 32 errors. Stray end tags, images without an alt-attribute, trailing slashs. The about page had 12 error-messages. In my latest review these were error-free.
 
 ### PEP8
-Looking through the pep8 validator in the gitpod IDE, issues of code lines longer than 79, where a few before I broke them off in new lines. Some were not changeable because of django own namecalling, those were added with a # noqa tag. In my latest review this was error-free.
+Looking through the pep8 validator in the gitpod IDE, issues of code lines longer than 79, where a few before I broke them off in new lines. Some were not changeable because of django own namecalling, those were added with a # noqa tag. In my latest review the python coding was error-free.
 
+### Manual testing
+Throughout the project, views and templates has been tested, and debugged. Having the ability to run `python3 manage.py runserver` and see all the changes being made, makes it rather pleasant to go forward. And With MVT you have to jump between files pretty frequent to stay ahead of all the reaction of your project. 
 
+The project has foremost been developed in Mozilla Firefox. But tested in Chrome as well, and on mobile phone(Samsung s10e), Chrome client.  
+
+### Form validation
+
+The Forms have validation but unfortunately easy to bypass with for example backspace in the commentform. 
 
 
 
 <p align="right"><a href="#intro">Return to table of contents</a></p><p id="tu"></p>
 
-# Technologies Used
+# Technologies/Tools Used
 
   - HTML5
   - CSS
   - Django
   - Python
   - Javascript
+
 
   #### Django Packages
 
@@ -372,6 +381,16 @@ Looking through the pep8 validator in the gitpod IDE, issues of code lines longe
 * [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
   
 * [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+
+### Tools
+[Iloveimg](https://www.iloveimg.com/) <br>
+compress images
+
+[Balasamiq](https://balsamiq.com/) <br>
+wireframes
+[Microsoft Powerpoint](https://www.microsoft.com/en-ww/microsoft-365/powerpoint) <br>
+Create an ERD Diagram
+
 
 
 <p align="center">
@@ -393,6 +412,10 @@ Looking through the pep8 validator in the gitpod IDE, issues of code lines longe
   - External Code <br>
   Used the following readme template as a good starting point for this project <br>
   https://github.com/gfpkelly1986/Punters-Pal 
+
+  - Content <br>
+  Get some hair terminology in place <br>
+  https://www.ties.com/blog/hair-terminology-tell-barber-exactly-want
   
 
 
