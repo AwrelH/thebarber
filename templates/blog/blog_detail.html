@@ -31,36 +31,35 @@
                 {{ blog.content | safe }}
                 <div class="row justify-content-center m-2">
 
-                    <div class="col-2 text-center">
+                    <div class="col-3 text-center">
 
                         <strong>
                             {% if user.is_authenticated %}
                             <form class="" action="{% url 'blog_upvote' blog.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if upvoted %}
-                                <button type="submit" name="blog_id" value="{{blog.slug}}" class="btn-like"><i
+                                <button type="submit" name="blog_id" value="{{blog.slug}}" class="btn-like "><i
                                         class="fa-solid text-danger fa-scissors"></i></button>
                                 {% else %}
                                 <button type="submit" name="blog_id" value="{{blog.slug}}" class="btn-like"><i
                                         class="fa-solid text-warning fa-hand-scissors"></i></button>
-                                {% endif %}
-                               
-                            </form>
-                            {% else %}
-                            
-                            <span class="text-secondary"><i class="fa-solid fa-scissors"></i></span>
-                            <span class="text-secondary">{{ blog.number_of_upvotes }} </span>
-                            {% endif %}
-                            <!-- number of upvotes -->
 
+
+                                {% endif %}
+                                {% else %}
+                                <span class="text-secondary"><i class="fa-solid fa-scissors"></i></span>
+                                {% endif %}
+                                <!-- number of upvotes -->
+                                <span class="text-secondary">{{ blog.number_of_upvotes }} </span>
+                            </form>
                         </strong>
                     </div>
-                    <div class="col-2 text-center">
+                    <div class="col-3 text-center">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary">
-                            {% if blog.comments.count <= 1 %} <i class="far fa-comment"></i>
+                            {% if blog.comments.count <= 1 %} <i class="far fa-comment text-primary"></i>
                                 {% else %}
-                                <i class="far fa-comments"></i>
+                                <i class="far fa-comments text-primary"></i>
                                 {% endif %}
                                 <!-- total number of comments -->
                                 {{total_comments}}
@@ -116,7 +115,8 @@
                     <button type="submit" class="btn btn-signup btn-lg">Submit</button>
                 </form>
                 {% else %}
-                <h3 class="text-center align-center">As a registered user you can leave a comment. <a href="{% url 'account_signup'%}">Sign up.</a></h3>
+                <h3 class="text-center align-center">As a registered user you can leave a comment. <a
+                        href="{% url 'account_signup'%}">Sign up.</a></h3>
                 {% endif %}
                 {% endif %}
             </div>
