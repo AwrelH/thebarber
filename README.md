@@ -13,6 +13,8 @@
 
   - So customers can make appointments.
 
+  LIVE LINK: https://thebarberawrl.herokuapp.com/
+
 
 ## Table of contents
 - <a href="#ui">UI/UX</a>
@@ -358,7 +360,7 @@ This also allows for the CSS-styling to get activated.
 As my project goes to the wire, battling with this project, my time management have not been on point meaning I haven't been able to go through the code, validate, check for error and correct them properly and length.  
 
 ### Lighthouse
-As seen below there were a few things to do before one could be satisfied with the numbers. Compress image sizes, remove redundant code in head. Add alt='text' to images. Small contrast ratio regarding bits of the content. 
+As seen below there were a few things to do before one could be satisfied with the numbers. Compress image sizes, remove redundant code in head. Add alt='text' to images. Small contrast ratio regarding bits of the content.  
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/barbercontrastratio.PNG"?raw=true alt="">EXAMPLE</p>
