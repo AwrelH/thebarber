@@ -131,6 +131,9 @@ body {
     color: rgb(22, 21, 21);
 }
 
+.btn {
+    padding: 20px;
+}
 .btn-signup {
     background-color: #23BBBB;
     color: #fff;
@@ -174,6 +177,9 @@ body {
 .comments> :first-child {
     margin: 0;
 }
+.bigger {
+    font-size: 1.5rem;
+}
 
 /* __________ BOOKING __________ */
 .app-card {
@@ -213,7 +219,7 @@ body {
 
 /* __________ ABOUT __________ */
 .chairs {
-    background-image: url("../barberchairs.png");
+    background-image: url("https://github.com/AwrelH/thebarber/blob/main/static/barberchairs.png");
     height: auto;
 }
 
@@ -237,7 +243,7 @@ iframe {
 
     /* Since i do not want the logo to appear double when on small screen */
     .logo {
-        visibility: collapse;
+        display:none ;
     }
 
 }
