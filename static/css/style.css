@@ -1,3 +1,4 @@
+/* __________ GENERAL __________ */
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Belleza&display=swap');
 
 body {
@@ -5,11 +6,12 @@ body {
 }
 
 .brand {
-    font-family: 'Belleza','Akaya Telivigala', Lato, sans-serif;
+    font-family: 'Belleza', 'Akaya Telivigala', sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
     color: #4A4A4F;
 }
+
 .icon {
     width: 60px;
 }
@@ -53,14 +55,17 @@ body {
     border-radius: 0 20px 0 0;
     padding-right: 10px;
 }
+
 .logo {
     margin: 0 auto;
     max-width: 600px;
 }
+
 .author {
     color: white;
     margin: 4px;
     text-transform: uppercase;
+    font-weight: 500;
 }
 
 .masthead {
@@ -96,9 +101,11 @@ body {
     transform: skew(15deg);
     z-index: 100;
 }
+
 .navbar {
     border-bottom: 1px solid rgb(243, 232, 232);
 }
+
 .post-link {
     text-decoration: none;
     color: #445261;
@@ -112,8 +119,9 @@ body {
 .post-title {
     margin-top: 5%;
     margin-left: 5%;
-    
+
 }
+
 .title-colors {
     background-color: #C6AE94;
 }
@@ -158,59 +166,76 @@ body {
     border: none;
 }
 
-.comments {
-    margin: 0
 
-}
 .comments:nth-child(even) {
     background-color: cornsilk;
 }
-.comments > :first-child {
-    margin:0;    
+
+.comments> :first-child {
+    margin: 0;
 }
 
-
-
-.few-good {
-    margin: 0 auto;
-    
-}
-
-.question-form {
-
-    max-width: 80%;
-    margin: 0 auto;
-
-}
-
+/* __________ BOOKING __________ */
 .app-card {
     background-color: rgb(205, 182, 157);
     margin-top: 20px;
     margin-bottom: 10px;
 }
+
 .card-body {
     background-color: #F9EBDC;
     padding-bottom: 0;
 }
-.card-title,.card-text, .card-body, .reactions, .author {
-    color: #9f5455;
-}
+
+
+/* __________ BLOG DETAIL __________ */
 .card-blog-detail {
     background-color: white;
     font-size: 1.8rem;
-    
+
 }
+
 .card-blog-detail:first-child {
     font-size: 1.5rem;
+}
+
+.comments {
+    margin: 0
+}
+
+.card-title,
+.card-text,
+.card-body,
+.reactions,
+.author {
+    color: #9f5455;
+}
+
+/* __________ ABOUT __________ */
+.chairs {
+    background-image: url("../barberchairs.png");
+    height: auto;
 }
 
 iframe {
     width: 100%;
 }
 
+.few-good {
+    margin: 0 auto;
+}
+
+.question-form {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+
 /* For small screens size from 650px wide and smaller */
 
 @media screen and (max-width: 650px) {
+
+    /* Since i do not want the logo to appear double when on small screen */
     .logo {
         visibility: collapse;
     }
