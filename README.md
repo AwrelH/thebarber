@@ -204,10 +204,11 @@
 
 
 ### Agile Approach
-GitHub's project has been used to make an Agile approach to this project. Using the Board style with, `todo, in progress and done`. Completing each issue and come closer the finish line with each step.
+GitHub's project has been used to make an Agile approach to this project. Using the Board style with, `todo, in progress and done`. Completing each issue and come closer the finish line with each step. <br>
+Categorize with labels, `Must-have, should-have or could-have`.
 
 <p align="center">
-  <img width=500 src=""?raw=true alt=""></p>
+  <img width=500 src="https://raw.githubusercontent.com/AwrelH/thebarber/main/static/images/readme-images/agile.PNG"?raw=true alt=""></p>
 
 
 ## Features
